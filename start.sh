@@ -1,8 +1,8 @@
 set -e
-pip install python-telegram-bot
+pip3 install python-telegram-bot
 if  ! pgrep -x "python3" > /dev/null
 then
-    python3 bot.py || true
+    nohup python3 bot.py &
     echo "Started";
 fi
 
