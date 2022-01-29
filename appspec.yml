@@ -1,0 +1,21 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/telegram_bot
+permissions:
+  - object: /home/ubuntu/telegram_bot
+    owner: ubuntu
+    group: ubuntu
+    type:
+      - directory
+      - file
+hooks:
+  ApplicationStart:
+    - location: start.sh
+      timeout: 300
+      runas: ubuntu
+#  ApplicationStop:
+#    - location: stop.sh
+#      timeout: 300
+#      runas: ubuntu
