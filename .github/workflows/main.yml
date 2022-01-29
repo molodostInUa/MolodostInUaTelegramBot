@@ -34,7 +34,9 @@ jobs:
       # copying script file
       - name: Copying start.sh
         run: cp start.sh ./app
-
+      # copying script file
+      - name: Copying stop.sh
+        run: cp stop.sh ./app
 
       # Install AWS CLI 2
       - name: Install AWS CLI 2
