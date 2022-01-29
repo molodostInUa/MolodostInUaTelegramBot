@@ -1,8 +1,8 @@
 name: deploy-app-action
 on:
   push:
-    branches:
-      - master
+    branches: [ master ]
+      
 jobs:
   deploy:
     name: CD
