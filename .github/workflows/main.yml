@@ -2,7 +2,7 @@ name: deploy-app-action
 on:
   push:
     branches:
-      - [ master ]
+      - master
 jobs:
   deploy:
     name: CD
@@ -13,7 +13,6 @@ jobs:
         s3-bucket: ['project-molodost-codedeploy-deployments']
         s3-filename: ['develop-aws-codedeploy-${{ github.sha }}']
         deploy-group: ['develop']
-    needs: build
     steps:
       - uses: actions/checkout@v2
       # set up .net core
